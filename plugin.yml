@@ -1,6 +1,6 @@
 name: DragonEggBuff
 version: '1.2-SNAPSHOT'
-main: main.java.dragoneggbuff.DragonEggBuff
+main: com.github.zamanvgr.dragoneggbuff.DragonEggBuff
 api-version: '1.20'
 author: hun1er
 website: https://github.com/Head-BOB

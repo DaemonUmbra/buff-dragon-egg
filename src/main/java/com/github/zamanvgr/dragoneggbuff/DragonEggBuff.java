@@ -1,4 +1,4 @@
-package main.java.dragoneggbuff;
+package com.github.zamanvgr.dragoneggbuff;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -16,7 +16,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public final class DragonEggBuff extends JavaPlugin implements Listener {
-   private final Map<UUID, PotionEffect> playerEffects = new HashMap();
+   private final Map<UUID, PotionEffect> playerEffects = new HashMap<UUID, PotionEffect>();
 
    public void onEnable() {
       this.getLogger().info("Plugin has enabled!");
@@ -40,10 +40,10 @@ public final class DragonEggBuff extends JavaPlugin implements Listener {
    }
 
    private void checkPlayerInventories() {
-      Iterator var1 = Bukkit.getOnlinePlayers().iterator();
+      Iterator<? extends Player> playerIterator = Bukkit.getOnlinePlayers().iterator();
 
-      while(var1.hasNext()) {
-         Player player = (Player)var1.next();
+      while(playerIterator.hasNext()) {
+         Player player = (Player)playerIterator.next();
          this.handleEggStatus(player);
       }
 
